@@ -79,3 +79,74 @@ print(list_123)
 # [2]
 
 
+(1, 2, 3)
+# => (1, 2, 3)
+tuple([1, 2, 3])
+# => (1, 2, 3)
+
+
+set()
+# => {}
+
+set(3, 2, 3, 'a', 'b', 'a')
+# => TypeError: set expected at most 1 argument, got 6
+
+set([3, 2, 3, 'a', 'b', 'a'])
+# => {2, 3, 'a', 'b'}
+
+
+s = {1, 2, 3}
+s.pop()
+# => 1
+s.remove(3)
+# => {2}
+
+
+{ "key1": "value1", "key2": "value2" }
+
+my_dict = { "key1": 1, "key2": 2 }
+my_dict["key2"]
+# => 2
+
+my_dict = { "key1": "value1", "key2": "value2" }
+print(my_dict["key3"])
+# => KeyError: 'key3'
+
+print(my_dict.get("key3"))
+# => None
+
+dict(x = 1, y = 2)
+# => {'x': 1, 'y': 2}
+
+
+no_value
+# => NameError: name 'no_value' is not defined
+
+no_value = None
+print(no_value)
+# => None
+
+type(True)
+# => <class 'bool'>
+type(False)
+# => <class 'bool'>
+
+not True
+# => False
+not False
+# => True
+not 1
+# => False
+not 0
+# => True
+not ''
+# => True
+not None
+# => True
+not []
+# => True
+not ()
+# => True
+not {}
+# => True
+
