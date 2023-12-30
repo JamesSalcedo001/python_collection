@@ -243,3 +243,23 @@ else:
     owner = "Reading newspaper."
 
 
+def control_flow(value):
+    if value:
+        # if the value is truthy
+        print("yep!")
+    else:
+        # if the value is falsy
+        print("nope!")
+
+control_flow(False)
+# "nope!"
+control_flow(None)
+# "nope!"
+control_flow(True)
+# "yep!"
+control_flow("")
+# "nope!"
+control_flow(0)
+# "nope!"
+control_flow("0")
+# "yep!"
