@@ -241,3 +241,5 @@ elif dog == "cuddly":
     owner = "Snuggling."
 else:
     owner = "Reading newspaper."
+
+
