@@ -208,3 +208,20 @@ def change_yourself():
 
 # change_yourself()
 # print(change_the_world)
+
+True and True
+# True
+False and False
+# False
+False and True
+# False
+True or True
+# True
+False or False
+# False
+False or True
+# True
+not True
+# False
+not not True
+# True
