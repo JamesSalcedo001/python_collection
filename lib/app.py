@@ -276,3 +276,11 @@ else:
   is_baby = 'not a baby'
 
 value_if_true if condition else value_if_false
+
+
+def divide(num1, num2):
+    try:
+        quotient = num1 / num2
+        print(quotient)
+    except:
+        print("An error occurred")
