@@ -263,3 +263,9 @@ control_flow(0)
 # "nope!"
 control_flow("0")
 # "yep!"
+
+
+age = 1
+
+is_baby = 'baby' if age < 2 else 'not a baby'
+
