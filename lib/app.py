@@ -274,3 +274,5 @@ if age < 2:
   is_baby = 'baby'
 else:
   is_baby = 'not a baby'
+
+value_if_true if condition else value_if_false
