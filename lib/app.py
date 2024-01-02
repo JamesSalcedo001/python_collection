@@ -269,3 +269,8 @@ age = 1
 
 is_baby = 'baby' if age < 2 else 'not a baby'
 
+age = 1
+if age < 2:
+  is_baby = 'baby'
+else:
+  is_baby = 'not a baby'
