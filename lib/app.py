@@ -307,3 +307,52 @@ def divide(num1, num2):
         print("Isn't division fun?")
 
         
+        dog = "cuddly"
+
+dict_map = {
+    "hungry": "Refilling food bowl.",
+    "thirsty": "Refilling water bowl.",
+    "playful": "Playing tug-of-war.",
+    "cuddly": "Snuggling.",
+}
+
+# Remember that a dictionary's .get() method lets us set a default value!
+owner = dict_map.get(dog, "Reading newspaper.")
+
+def admin_login(username, password):
+    if username.upper() == "ADMIN" and password == "12345":
+        return "Access granted"
+    
+    return "Access denied"
+     
+def hows_the_weather(temperature):
+   if temperature == 33:
+        return "It's brisk out there!"
+   elif temperature == 55:
+       return "It's a little chilly out there!"
+   elif temperature == 99:
+       return "It's too dang hot out there!"
+   elif temperature == 75:
+       return "It's perfect out there!"
+
+def fizzbuzz(num):
+   if not num % 15:
+       return "FizzBuzz"
+   if not num % 5:
+       return "Buzz"
+   if not num % 3:
+       return "Fizz"
+   return num
+
+
+def calculator(operation, num1, num2):
+    if operation == "+":
+        return num1 + num2
+    elif operation == "-":
+        return num1 - num2
+    elif operation == "*":
+        return num1 * num2
+    elif operation == "/":
+        return num1 / num2
+    print( "Invalid operation!")
+    return None
