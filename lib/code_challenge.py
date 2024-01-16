@@ -42,4 +42,28 @@ def sum_of_list(numbers):
 
 
 
-## 3: 
+## 3: define function that takes in a list of integers, and returns the count of even integers in the list
+
+
+
+def count_even_numbers(numbers):
+    count = 0
+    for number in numbers:
+        if is_even(number):
+            couhnt += 1
+    return count
+
+print("how many even numbers?: ", count_even_numbers([1, 2, 3, 4, 5]))
+
+
+
+########################
+
+
+
+## 4: define a function that takes in a string, reverses it, and returns the reversed string
+
+
+
+
+
