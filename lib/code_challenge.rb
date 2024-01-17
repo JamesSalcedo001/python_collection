@@ -88,73 +88,67 @@ puts "\n#######\n".green
 
 ## 6: define a function that takes in an integer and returns True or False checking whether it is a Prime Number
 
-def is_prime(number):
-    if number <= 1:
-        return False
-    for i in range(2, int(number**0.5) + 1):
-        if number % i == 0:
-            return False
-    return True
+def is_prime(number)
+    return false if number <= 1
+    (2..Math.sqrt(number)).each do |i|
+        return false if number % i == 0
+    end
+    true
+end
 
 
-print("11 is prime? -->", is_prime(11))
-print("4 is prime? -->", is_prime(4))
+puts "11 is prime? -->".blue.bold.underline + " #{is_prime(11)}"
+puts "4 is prime? -->".blue.bold.underline + " #{is_prime(4)}"
 
 
-print("\n#######\n")
+puts "\n#######\n".green
 
 
 
 ## 7: define a function that finds the longest word in a sentence
 
 
-def longest_word(sentence):
-    words = sentence.split()
-    max_word = words[0]
-    for word in words:
-        if len(word) > len(max_word):
-            max_word = word
-    return max_word
+def longest_word(sentence)
+    sentence.split.max_by(&:length)
+end
 
 sentence = "cool cats are cool but I am the coolest"
-print("what's the longest word in the sentence? -->", longest_word(sentence))
+puts "what's the longest word in the sentence? -->".blue.bold.underline + " #{ longest_word(sentence)}"
 
 
 
-print("\n#######\n")
+puts "\n#######\n".green
 
 
 
 ## 8: define a function that takes a list of numbers and returns a new list containing only the square of the even numbers from the original list
 
 
-def square_of_even(numbers):
-    return [x**2 for x in numbers if x % 2 == 0]
+def square_of_even(numbers)
+    numbers.select { |x| x.even? }.map { |x| x**2 }
+end
 
-print("return the squares of only the even numbers of this list [1, 2, 3, 4, 5]: -->", square_of_even([1, 2, 3, 4, 5]))
+puts "return the squares of only the even numbers of this list [1, 2, 3, 4, 5]: -->".blue.bold.underline + " #{square_of_even([1, 2, 3, 4, 5])}"
 
 
 
-print("\n#######\n")
+puts "\n#######\n".green
 
 
 
 ## 9: define a function that calculates the factorial of a number
 
 
-def factorial(n):
-    if n == 0:
-        return 1
-    result = 1
-    for i in range(2, n + 1):
-        result *= i
-    return result
+def factorial(n)
+    return 1 if n == 0
+    (1..n).inject(:*)
+end
 
-print("what is the factorial of 4? -->", factorial(4))
+puts "what is the factorial of 4? -->".blue.bold.underline + " #{factorial(4)}"
 
 
 
-print("\n#######\n")
+puts "\n#######\n".green
 
 
 
@@ -162,18 +156,18 @@ print("\n#######\n")
 
 
 
-def merge_dictionaries(dict1, dict2):
-    merged_dict = dict1.copy()
-    for key, value in dict2.items():
-        if key not in dict1 or value > dict1[key]:
-            merged_dict[key] = value
-    return merged_dict
+def merge_dictionaries(dict1, dict2)
+    dict2.each do |key, value|
+        dict1[key] = value if !dict1.key?(key) || value > dict1[key]
+    end
+    dict1
+end
 
 dict1 = {"a": 1, "b": 2, "c": 3}
 dict2 = {"b": 3, "c": 2, "d": 4}
 
-print(merge_dictionaries(dict1, dict2))
+puts "two dicts merged -->".blue.bold.underline + " #{merge_dictionaries(dict1, dict2)}"
 
 
 
-print("\n#######\n")
+puts "\n#######\n".green
