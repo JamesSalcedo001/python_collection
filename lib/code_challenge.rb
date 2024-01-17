@@ -152,21 +152,21 @@ puts "\n#######\n".green
 
 
 
-## 10: define a function that takes in two dictionaries and merges them. However, for keys that exist in both dictionaries, only add the key-value pair to the resulting dictionary if the value associated with the key is greater in the second dictionary
+## 10: define a function that takes in two hashes and merges them. However, for keys that exist in both hashes, only add the key-value pair to the resulting hash if the value associated with the key is greater in the second hash
 
 
 
-def merge_dictionaries(dict1, dict2)
-    dict2.each do |key, value|
-        dict1[key] = value if !dict1.key?(key) || value > dict1[key]
+def merge_hashes(hash1, hash2)
+    hash2.each do |key, value|
+        hash1[key] = value if !hash1.key?(key) || value > hash1[key]
     end
-    dict1
+    hash1
 end
 
-dict1 = {"a": 1, "b": 2, "c": 3}
-dict2 = {"b": 3, "c": 2, "d": 4}
+hash1 = {"a" => 1, "b" => 2, "c" => 3}
+hash2 = {"b" => 3, "c" => 2, "d" => 4}
 
-puts "two dicts merged -->".blue.bold.underline + " #{merge_dictionaries(dict1, dict2)}"
+puts "two hashes merged -->".blue.bold.underline + " #{merge_hashes(hash1, hash2)}"
 
 
 
